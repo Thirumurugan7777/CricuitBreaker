@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/Apigatewaydb
+    url: jdbc:mysql://localhost:3306/Cricuitbreakerdb
     username: root
     password: Thiru@1234
     driver-class-name: com.mysql.cj.jdbc.Driver
