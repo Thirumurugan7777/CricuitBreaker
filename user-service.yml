@@ -2,18 +2,19 @@ server:
   port: 9001
 
 spring:
+  application:
+    name: user-service
   datasource:
-    url: jdbc:mysql://localhost:3306/cricuitdb
+    url: jdbc:mysql://localhost:3306/learn_resilience_4j
     username: root
-    password: Thiru@1234
+    password: Dhiwakar@2003
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      # Options for ddl-auto: none, update, create, create-drop, validate
       ddl-auto: update 
     show-sql: true
-  application:
-    name: user-service
+
+
 resilience4j:
   circuitbreaker:
     instances:
@@ -25,6 +26,7 @@ resilience4j:
         waitDurationInOpenState: 12s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
+      
       order-service:
         registerHealthIndicator: true
         slidingWindowSize: 5
@@ -33,6 +35,14 @@ resilience4j:
         waitDurationInOpenState: 12s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
+      
+  timelimiter:
+    instances:
+      user-service:
+       timeout-duration: 13s
+
+     
+
 
 
 eureka:
