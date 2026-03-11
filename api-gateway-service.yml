@@ -50,7 +50,7 @@ resilience4j:
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 3s
+        waitDurationInOpenState: 12s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
       product-service:
@@ -58,7 +58,7 @@ resilience4j:
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 3s
+        waitDurationInOpenState: 12s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
       order-service:
@@ -66,6 +66,6 @@ resilience4j:
         slidingWindowSize: 5
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
-        waitDurationInOpenState: 3s
+        waitDurationInOpenState: 12s
         permittedNumberOfCallsInHalfOpenState: 3
         eventConsumerBufferSize: 10
