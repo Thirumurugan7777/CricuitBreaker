@@ -5,9 +5,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://localhost:3306/learn_resilience_4j
+    url: jdbc:mysql://localhost:3306/cricuitdb
     username: root
-    password: Dhiwakar@2003
+    password: Thiru@1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -38,7 +38,7 @@ resilience4j:
       
   timelimiter:
     instances:
-      user-service:
+      order-service:
        timeout-duration: 13s
 
      
